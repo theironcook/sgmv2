@@ -2,35 +2,68 @@
   <div class="home">
     <div class="nav-menu">
       <div class="nav-header">Saas Glue</div>
-      <div class="nav-link nav-link-selected">Overview</div>
+      <div class="nav-link" 
+          :class="{'nav-link-selected': activeScrollTargetId === 'scroll-target-overview'}">
+          <a href="" @click.prevent="scrollTo('overview')">Overview</a>
+      </div>
       
       <div class="nav-link-spacer"></div>
 
       <div class="nav-header">Key Features</div>
-      <div class="nav-link ">Works with any platform</div>
-      <div class="nav-link">Works virtually anywhere</div>
-      <div class="nav-link">Works with any language</div>
-      <div class="nav-link">Provides all infrastructure</div>
-      <div class="nav-link">Scales horizontally</div>
+      <div class="nav-link"
+            :class="{'nav-link-selected': activeScrollTargetId === 'scroll-target-integrates'}">
+        <a href="" @click.prevent="scrollTo('integrates')">Integrates with other solutions</a>
+      </div>
+      <div class="nav-link"
+            :class="{'nav-link-selected': activeScrollTargetId === 'scroll-target-anywhere'}">
+        <a href="" @click.prevent="scrollTo('anywhere')">Works virtually anywhere</a>    
+      </div>
+      <div class="nav-link"
+            :class="{'nav-link-selected': activeScrollTargetId === 'scroll-target-language'}">
+        <a href="" @click.prevent="scrollTo('language')">Works with any language</a>
+      </div>
+      <div class="nav-link"
+            :class="{'nav-link-selected': activeScrollTargetId === 'scroll-target-infrastructure'}">
+        <a href="" @click.prevent="scrollTo('infrastructure')">Provides all the infrastructure</a>
+      </div>
+      <div class="nav-link"
+            :class="{'nav-link-selected': activeScrollTargetId === 'scroll-target-scalable'}">
+        <a href="" @click.prevent="scrollTo('scalable')">Scales horizontally</a>
+      </div>
 
       <div class="nav-link-spacer"></div>
 
       <div class="nav-header">How it Works</div>
-      <div class="nav-link">Platform architecture</div>
-      <div class="nav-link">Job design</div>
-      <div class="nav-link">Job management</div>
-      <div class="nav-link">Something else</div>
+      <div class="nav-link"
+            :class="{'nav-link-selected': activeScrollTargetId === 'scroll-target-architecture'}">
+        <a href="" @click.prevent="scrollTo('architecture')">Platfom architecture</a>
+      </div>
+      <div class="nav-link"
+            :class="{'nav-link-selected': activeScrollTargetId === 'scroll-target-structure'}">
+        <a href="" @click.prevent="scrollTo('structure')">Job structure</a>
+      </div>
+      <div class="nav-link"
+            :class="{'nav-link-selected': activeScrollTargetId === 'scroll-target-management'}">
+        <a href="" @click.prevent="scrollTo('management')">Job management</a>
+      </div>
+      <div class="nav-link"
+            :class="{'nav-link-selected': activeScrollTargetId === 'scroll-target-state'}">
+        <a href="" @click.prevent="scrollTo('state')">Job state</a>
+      </div>
 
       <div class="nav-link-spacer"></div>
 
-      <div class="nav-header">Sign Up</div>
+        <div class="nav-header"
+            :class="{'nav-link-selected': activeScrollTargetId === 'scroll-target-signup'}">
+        <a href="" @click.prevent="scrollTo('signup')">Sign Up</a>
+      </div>
     </div>
 
     <div class="page-spacer"></div>
     
-    <div class="main-body">
+    <div class="main-body scroll-area">
 
-      <div class="header">
+      <div class="header" id="scroll-target-overview">
         Saas glue in a nutshell
       </div>
       <br><br>
@@ -113,19 +146,19 @@
 
       <div class="blurb-1 blurb-text">
         <ul>
-          <li>
+          <li class="checked-li">
             Integrates with all other platforms through a cloud API
           </li>
-          <li>
+          <li class="checked-li">
             Works in any network that allows outgoing HTTPS to the secure sg cloud
           </li>
-          <li>
+          <li class="checked-li">
             Works with any set of programming languages
           </li>
-          <li>
+          <li class="checked-li">
             No add-on components to install and manage
           </li>
-          <li>
+          <li class="checked-li">
             Scales horizontally to handle enterprise workloads
           </li>
         </ul>
@@ -133,13 +166,16 @@
 
       <div class="section-break"></div>
 
-      <div class="section-title">key feature</div>
+      <div class="section-title" id="scroll-target-integrates">key feature</div>
       <div class="header">
-        Works with any platform
+        Integrates with other solutions
       </div>
       <br><br>
       <div class="blurb-1 blurb-text">
-        No add-on modules are required to integrate with saas glue.  Using secure credentials you can invoke jobs through our API from any platform.  Your jobs can be designed to call back to any of your automation platforms, maintaining a cross-platform process thread.
+        Using secure credentials you can invoke jobs through the API from any platform.  Saas glue jobs can be designed to call back to any of your automation platforms, maintaining a cross-platform process thread.
+      </div>
+      <div class="blurb-1 blurb-text">
+        Because saas glue works with anything you can augment your current solutions without having to rip and replace anything.
       </div>
       <div class="blurb-1 blurb-text">
         [cloud logo]
@@ -150,13 +186,13 @@
 
       <div class="section-break"></div>
 
-      <div class="section-title">key feature</div>
+      <div class="section-title" id="scroll-target-anywhere">key feature</div>
       <div class="header">
         Works virtually anywhere
       </div>
       <br><br>
       <div class="blurb-1 blurb-text">
-        When the saas glue agent is installed, it immediately calls home to the cloud and establishes a regular heartbeat through HTTPS.  The agent receives instructions from a message queue and sends code output to API endpoints.
+        When the saas glue agent is installed, it immediately calls home to the cloud and establishes a regular heartbeat through HTTPS.  The agent receives instructions from a message queue and sends results to the API.
       </div>
       <div class="blurb-1 blurb-text">
         This simple design lets the agent work on almost any network.  And since agents talk only to the cloud, your job can hop from one network to another without regard to network boundaries.
@@ -164,30 +200,44 @@
 
       <div class="section-break"></div>
 
-      <div class="section-title">key feature</div>
+      <div class="section-title" id="scroll-target-language">key feature</div>
       <div class="header">
         Works with any language
       </div>
       <br><br>
       <div class="blurb-1 blurb-text">
-        Our design conforms to the “dumb pipes, smart endpoints” principle.  The agent doesn’t execute code, so you can use any programming language as long as the right execution environment is installed on the machine.
+        Our design conforms to the “dumb pipes, smart endpoints” principle.  The agent doesn’t execute code, so you can use any programming language as long as a corresponding interpreter exists on the agent host machine.
       </div>
       <div class="blurb-1 blurb-text">
-        Agents assist with execution by passing in variables, arguments and artifacts at runtime.  They also set up and tear down the execution environment using environment variables.
+        Agents assist with execution by passing in variables, arguments and artifacts to the runtime environment.  
       </div>
       <div class="blurb-1 blurb-text">
-        Because the agent can receive and send variables you can maintain state in your job.  This is true even in polyglot jobs where the preceding and succeeding tasks are written in different languages.
+        Saas glue’s runtime variables functionality allows you to communicate state between tasks in your job.  This is true even in polyglot jobs where the preceding and succeeding tasks are written in different languages.
       </div>
 
       <div class="section-break"></div>
 
-      <div class="section-title">key feature</div>
+      <div class="section-title" id="scroll-target-infrastructure">key feature</div>
       <div class="header">
         Provides all the infrastructure
       </div>
       <br><br>
       <div class="blurb-1 blurb-text">
-        Saas glue provides all the job infrastructure.  The cloud platform initiates jobs when triggered by schedules or API calls.  It manages the job route based on your design.  It monitors the job and sends alerts when there’s a failure.
+        Saas glue provides all the job infrastructure to 
+        <ul>
+          <li class="checked-li">
+            Initiate
+          </li>
+          <li class="checked-li">
+            Manage
+          </li>
+          <li class="checked-li">
+            Monitor
+          </li>
+          <li class="checked-li">
+            Alert
+          </li>
+        </ul>
       </div>
       <div class="blurb-1 blurb-text">
         Our lightweight agent is self-updating, placing very little management burden on you.
@@ -198,15 +248,172 @@
 
       <div class="section-break"></div>
 
-      <div class="section-title">key feature</div>
+      <div class="section-title" id="scroll-target-scalable">key feature</div>
       <div class="header">
         Scalable platform
       </div>
       <br><br>
       <div class="blurb-1 blurb-text">
-        Saas glue is designed to scale horizontally to handle enterprise workloads.  Our stateless API lets us scale up workers as needed to ensure that performance remains stable as customer demand grows.
+        Saas glue scales horizontally to handle enterprise workloads.
       </div>
 
+      <div class="section-break"></div>
+
+      <div class="section-title" id="scroll-target-architecture">how</div>
+      <div class="header">
+        Platform architecture
+      </div>
+      <br><br>
+      <div class="blurb-1 blurb-text">
+        Saas glue has two main components
+        <ul>
+          <li>
+            SaaS platform
+          </li>
+          <li>
+            Agent
+          </li>
+        </ul>
+      </div>
+      <div class="blurb-1 blurb-text">
+        The <b>platform’s</b> main responsibility is job management. 
+        <ul>
+          <li>
+            Hold job designs and code files
+          </li>
+          <li>
+            Initiate job when triggered manually or by a schedule or API call
+          </li>
+          <li>
+            Distribute tasks to agents for execution
+          </li>
+          <li>
+            Manage routing between tasks
+          </li>
+          <li>
+            Receive task results from agents and aggregate it in a job record
+          </li>
+          <li>
+            Send alerts
+          </li>
+        </ul>
+      </div>
+      <div class="blurb-1 blurb-text">
+        The <b>agent’s</b> main responsibility is task management.
+        <ul>
+          <li>
+            Receive tasks and pass code files to the interpreter
+          </li>
+          <li>
+            Prepare the execution environment 
+          </li>
+          <li>
+            Report the tail during code execution
+          </li>
+          <li>
+            Send code output to the platform
+          </li>
+          <li>
+            Clean up the execution environment
+          </li>
+        </ul>
+      </div>
+      <div class="blurb-1 blurb-text">
+        <img width="600" src="~@/assets/Architecture1.png">
+      </div>
+
+      <div class="section-break"></div>
+
+      <div class="section-title" id="scroll-target-structure">how</div>
+      <div class="header">
+        Job structure
+      </div>
+      <br><br>
+      <div class="blurb-1 blurb-text">
+        Jobs are composed of tasks, steps and scripts.
+      </div>
+      <div class="blurb-1 blurb-text">
+        <img width="600" src="~@/assets/JobStructure1.png">
+      </div>
+      <div class="blurb-1 blurb-text">
+        <b>Jobs</b> can have multiple tasks.  The job definition contains the code files, variables, arguments and artifacts as well as instructions for agent targeting and task routing.
+      </div>
+      <div class="blurb-1 blurb-text">
+        You can schedule jobs with a cron type scheduler or initiate them through an API call.  Multiple schedules can be attached to a job.  You can also run a job manually through the web console.
+      </div>
+      <div class="blurb-1 blurb-text">
+        <b>Tasks</b> can have multiple steps.  The steps of a task run in sequence on the same machine. 
+      </div>
+      <div class="blurb-1 blurb-text">
+        <b>Agents</b> can be targeted for tasks by name or user generated tags.  You create tags in the form of key value pairs (i.e. os=linux) and assign them to agents.  Using tags you can qualify groups of agents to run a task.
+      </div>
+      <div class="blurb-1 blurb-text">
+        <b>Steps</b> can have only one script.  The step holds command line arguments and environment variables needed for script execution.
+      </div>
+
+      <div class="section-break"></div>
+
+      <div class="section-title" id="scroll-target-management">how</div>
+      <div class="header">
+        Job routes
+      </div>
+      <br><br>
+      <div class="blurb-1 blurb-text">
+        You can create variable routes within a job using your code output to determine the route.
+      </div>
+      <div class="blurb-1 blurb-text">
+        There are two routing types--inbound and outbound.
+      </div>
+      <div class="blurb-1 blurb-text">
+        With inbound routes you declare which task the job will route to next based on specified output received in prior tasks.  The expected path of a job will most commonly be defined with inbound routes.
+      </div>
+      <div class="blurb-1 blurb-text">
+        Outbound routes let you specify a task to execute based on a specific outcome of a current task.  For instance, if there is a failure in the current task you can route to a recovery task to get your job back on track.
+      </div>
+
+      <div class="section-break"></div>
+
+      <div class="section-title" id="scroll-target-state">how</div>
+      <div class="header">
+        Job state
+      </div>
+      <br><br>
+      <div class="blurb-1 blurb-text">
+        Saas glue is stateless to make it scalable, but your jobs can be stateful.
+      </div>
+      <div class="blurb-1 blurb-text">
+        You can insert variables into scripts and extract them out using a light touch syntax that is understood by the agent and platform API.  In saas glue these are referred to as “runtime variables”.
+      </div>
+      <div class="blurb-1 blurb-text">
+        @sgg stands for “saas glue global”.  Inserting this syntax into any script tells the agent where to insert a variable before passing it to the interpreter for execution.
+      </div>
+      <div class="blurb-1 blurb-text">
+        @sgo stands for “saas glue out”.  Inserting it into your script alerts the agent to extract the variable and send it back to the API for use in other tasks within the job.
+      </div>
+      <div class="blurb-1 blurb-text">
+        This method lets you keep state even in a polyglot job because the scripts and execution environments are decoupled. [LINK TO DOCUMENTATION SYNTAX PAGE]
+      </div>
+
+      <div class="section-break"></div>
+
+      <div class="section-title" id="scroll-target-signup">sign up</div>
+      <div class="header">
+        Sign Up
+      </div>
+      <br><br>
+      <div class="blurb-1 blurb-text">
+        If you find yourself having to work around limitations in your current automation platforms try using saas glue.  You can get started [LINK TO GETTING STARTED] in as little as five minutes and running scripts from the cloud console is free.
+      </div>
+      <div class="blurb-1 blurb-text">
+        Sign up today and see how saas glue can fill your process automation gaps.
+      </div>
+      <div class="blurb-1 blurb-text">
+        <div class="button-container"><a href="https://console.saasglue.com" class="button dark-button">Try for Free</a></div>
+      </div>
+
+
+
+      <div class="bottom-padding"></div>
     </div>
   </div>
 </template>
@@ -218,6 +425,56 @@ import { Component, Vue } from 'vue-property-decorator';
 @Component
 export default class Home extends Vue {
   
+  private scrollTargets?: (HTMLElement|null)[];
+  private activeScrollTargetId = 'scroll-target-overview';
+
+  private mounted(){
+    const options = {
+      root: null,
+      rootMargin: '0px 0px -80% 0px',
+      threshold: 1
+    };
+
+    this.scrollTargets = [ 'overview', 'integrates', 'anywhere', 'language', 'infrastructure', 'scalable',
+                           'architecture', 'structure', 'management', 'state' ].map((targetName) => {
+      return document.getElementById(`scroll-target-${targetName}`);
+    });
+
+    const intersectionObserver = new IntersectionObserver(this.onIntersected, options);
+
+    this.scrollTargets.map((target) => {
+      if(target){
+        intersectionObserver.observe(target);
+      }
+    });
+  }
+
+  private onIntersected(entries: IntersectionObserverEntry[], observer: any){
+    entries.forEach((entry) => {
+      console.log(entry.target.id);
+
+      if (entry.isIntersecting) {  
+        this.activeScrollTargetId = entry.target.id;
+      }
+    });
+  }
+
+  private scrollTo(target: string){
+    const targetEl = document.getElementById(`scroll-target-${target}`);
+    const offset = 25;
+    const bodyRect = document.body.getBoundingClientRect().top;
+    const elementRect = targetEl?.getBoundingClientRect().top;
+
+    if(elementRect){
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  }
 }
 </script>
 
@@ -275,7 +532,7 @@ $header_size: 24px;
 .main-body {
   text-align: left;
   margin-left: 300px;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .section-title {
@@ -303,7 +560,7 @@ $header_size: 24px;
   height: calc(#{$sg_text_size} * 4);
 }
 
-li {
+.checked-li {
   list-style-type: none;
   background-image: url('~@/assets/GreenCheckbox.png');
   background-repeat: no-repeat;
@@ -346,4 +603,7 @@ li {
   font-weight: 700;
 }
 
+.bottom-padding {
+  height: 600px;
+}
 </style>

@@ -12,10 +12,10 @@
 
         <span class="center-spacer"></span>
         <span class="nav-link">
-          <button class="button dark-button">Try for Free</button>
+          <div class="button-container"><a href="https://console.saasglue.com" class="button dark-button">Try for Free</a></div>
         </span>
         <span class="nav-link">
-          <button class="button light-button">Sign In</button>
+          <div class="button-container"><a href="https://console.saasglue.com" class="button light-button">Sign In</a></div>
         </span>
       </div>
     </div>
@@ -90,6 +90,10 @@ a {
   .center-spacer {
     flex-grow: 1;
   }
+}
+
+.button-container {
+  margin-top: 5px;
 }
 
 .button {
