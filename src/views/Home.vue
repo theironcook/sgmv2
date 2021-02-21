@@ -64,20 +64,31 @@
     <div class="main-body scroll-area">
 
       <div class="header" id="scroll-target-overview">
-        Saas glue in a nutshell
+        Fill the gaps in your automation infrastructure
       </div>
       <br><br>
       <div class="blurb-1 blurb-text">
-        Our unique automation approach decouples job management from code execution.  
+        Saas glue is a SaaS-based integration, orchestration and automation platform that lets you fill the gaps in your existing automation infrastructure
       </div>
+
       <div class="blurb-1 blurb-text">
-       Jobs are managed in the cloud where all of the code is stored.  At runtime, tasks are distributed to machines for execution through agents, which you install.  Agents collect all output and return it the the cloud where it is assembled into a complete job record.
-      </div>
-      <div class="blurb-1 blurb-text">
-        With saas glue you can work with all of your machines using any set of programming languages to do pretty much anything.
-      </div>
-      <div class="blurb-1 blurb-text">
-        Here is our rule of thumb: If you can do something from the local command prompt you can do it the same way in saas glue through our method of delivering code to the computing environment.
+        <ul>
+          <li class="checked-li">
+            Integrates with all other platforms through a cloud API
+          </li>
+          <li class="checked-li">
+            Works in any network that allows outgoing HTTPS to the secure sg cloud
+          </li>
+          <li class="checked-li">
+            Works with any set of programming languages
+          </li>
+          <li class="checked-li">
+            No add-on components to install and manage
+          </li>
+          <li class="checked-li">
+            Scales horizontally to handle enterprise workloads
+          </li>
+        </ul>
       </div>
 
       <div class="section-break"></div>
@@ -135,33 +146,21 @@
 
       <div class="section-break"></div>
 
-      <div class="section-title">key feature</div>
       <div class="header">
-        Fill the gaps in your automation infrastructure
+        Saas glue in a nutshell
       </div>
       <br><br>
       <div class="blurb-1 blurb-text">
-        Saas glue is a SaaS-based integration, orchestration and automation platform that lets you fill the gaps in your existing automation infrastructure
+        Our unique automation approach decouples job management from code execution.  
       </div>
-
       <div class="blurb-1 blurb-text">
-        <ul>
-          <li class="checked-li">
-            Integrates with all other platforms through a cloud API
-          </li>
-          <li class="checked-li">
-            Works in any network that allows outgoing HTTPS to the secure sg cloud
-          </li>
-          <li class="checked-li">
-            Works with any set of programming languages
-          </li>
-          <li class="checked-li">
-            No add-on components to install and manage
-          </li>
-          <li class="checked-li">
-            Scales horizontally to handle enterprise workloads
-          </li>
-        </ul>
+       Jobs are managed in the cloud where all of the code is stored.  At runtime, tasks are distributed to machines for execution through agents, which you install.  Agents collect all output and return it the the cloud where it is assembled into a complete job record.
+      </div>
+      <div class="blurb-1 blurb-text">
+        With saas glue you can work with all of your machines using any set of programming languages to do pretty much anything.
+      </div>
+      <div class="blurb-1 blurb-text">
+        Here is our rule of thumb: If you can do something from the local command prompt you can do it the same way in saas glue through our method of delivering code to the computing environment.
       </div>
 
       <div class="section-break"></div>
