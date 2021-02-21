@@ -497,7 +497,6 @@ $header_size: 24px;
 
   position: fixed;
   top: 0;
-  width: 95%;
 
   margin-top: 100px;
 }
