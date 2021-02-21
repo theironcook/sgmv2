@@ -2,7 +2,7 @@
   <div id="app">
     <div>
       <div class="top-nav">
-        <a class="nav-link logo" href=""><img src="logo_1.png"></a>
+        <a class="nav-link logo" href=""><img src="~@/assets/logo_1.png"></a>
         <span class="spacer"></span>
         <a class="nav-link selected" href="">Home</a>
         <a class="nav-link" href="">Getting Started</a>
