@@ -1,13 +1,15 @@
 <template>
   <div id="app">
     <div>
-      <div class="top-nav">
-        <a class="nav-link logo" href=""><img src="~@/assets/logo_1.png"></a>
+      <div class="desktop-menu">
+        <router-link to="/"><img src="~@/assets/logo_1.png"></router-link>
         <span class="spacer"></span>
-        <a class="nav-link selected" href="">Home</a>
-        <a class="nav-link" href="">Getting Started</a>
-        <a class="nav-link" href="">Pricing</a>
-        <a class="nav-link" href="">Resources</a>
+
+        <router-link to="/" class="nav-link" :class="{selected: isRouterLinkActive('/')}">Home</router-link>
+        <router-link to="/GettingStarted" class="nav-link" :class="{selected: isRouterLinkActive('/GettingStarted')}">Getting Started</router-link>
+        <router-link to="/Pricing" class="nav-link" :class="{selected: isRouterLinkActive('/Pricing')}">Pricing</router-link>
+        <router-link to="/Docs" class="nav-link" :class="{selected: isRouterLinkActive('/Docs')}">Docs</router-link>
+
         <a class="nav-link" href="">Blog</a>
 
         <span class="center-spacer"></span>
@@ -20,15 +22,105 @@
       </div>
     </div>
 
+    <div class="burger-menu">
+      <span class="left-menu">
+        <a href="" class="main-nav-link"  @click.prevent="hideBurgerPopup = !hideBurgerPopup">
+          <img src="~@/assets/HamburgerLines.png" width="30px;">
+        </a>
+        <a class="nav-link logo" href="">
+          <img width="150px" 
+                style="margin-left: 15px; margin-top: -5px;" 
+                src="~@/assets/logo_1.png">
+        </a>
+      </span>
+      <span class="right-menu">
+        <a href="https://console.saasglue.com" class="button dark-button">Try for Free</a>
+      </span>
+    </div>
+
+    <div v-cloak class="popup" :hidden="hideBurgerPopup">
+      <div class="popup-content" style="width: 240px;">
+        <div class="popup-close">
+          <div class="popup-close-x">
+            <a href="" style="color: black; font-size: 24px;" @click.prevent="hideBurgerPopup = !hideBurgerPopup">
+              x
+            </a>
+          </div>
+        </div>
+        <div class="burger-popup-links">
+          <div class="burger-popup-links-left-aligned">            
+            <router-link to="/" class="burger-popup-link" @click.native="hideBurgerPopup=true">Home</router-link>            
+            <router-link to="/GettingStarted" class="burger-popup-link" @click.native="hideBurgerPopup=true">Getting Started</router-link>
+            <router-link to="/pricing" class="burger-popup-link" @click.native="hideBurgerPopup=true">Pricing</router-link>
+            <router-link to="/docs" class="burger-popup-link" @click.native="hideBurgerPopup=true">Resources</router-link>
+            <router-link to="/docs" class="burger-popup-link" @click.native="hideBurgerPopup=true">Blog</router-link>
+            <span class="burger-popup-spacer"></span>
+            <a href="https://console.saasglue.com" class="burger-popup-link round-button">
+              Login
+              <span style="font-size: 16px; font-weight: 300;">
+                >
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="main-body">
       <router-view/>
     </div>
 
+    &#169; 2021, saas glue LLC​
+    <router-link to="/ContactUs" class="nav-link" style="margin-left: 20px;">Contact Us</router-link>
+
   </div>
 </template>
 
+
+<script lang="ts">
+import { Component, Vue, Watch } from 'vue-property-decorator';
+
+@Component
+export default class App extends Vue {
+  private hideBurgerPopup = true;
+
+  private isRouterLinkActive(path: string): boolean {
+    return this.$router.currentRoute.path === path;
+  }
+}
+</script>
+
 <style lang="scss">
 
+/* Mobile */
+@media (max-width: 1230px) {
+  .desktop-menu {
+    display: none;
+  }
+
+  .burger-menu {
+    display: flex;
+  }
+
+  .main-body {
+    margin-top: 40px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1230px) {
+  .desktop-menu {
+    display: flex;
+  }
+
+  .burger-menu {
+    display: none;
+  }
+
+  .main-body {
+    margin-top: 90px;
+  }
+}
 
 #app {
   font-family: 'Noto Sans', Helvetica, sans-serif;
@@ -37,6 +129,7 @@
   text-align: center;
   color: $sg_text;
   scroll-behavior: smooth;
+  width: 100%;
 }
 
 a {
@@ -44,9 +137,7 @@ a {
   text-decoration: none; /* no underline */
 }
 
-.top-nav {
-  display: flex;
-
+.desktop-menu {
   position: fixed;
   top: 0;
   width: 95%;
@@ -59,14 +150,13 @@ a {
   border-left-width: 0;
   border-right-width: 0;
   border-bottom-width: 1px;
+  box-shadow: 0 4px 6px -6px gray;
 
   padding-top: 14px;
   padding-bottom: 14px;
 
   padding-left: 18px;
   padding-right: 24px;
-
-	box-shadow: 0 4px 6px -6px gray;
   
   .nav-link {
     margin-left: 22px;
@@ -90,6 +180,97 @@ a {
   .center-spacer {
     flex-grow: 1;
   }
+}
+
+.burger-menu {
+  position: fixed;
+  top: 0;
+  width: 93%;
+
+  background-color: white;
+
+  border-style: solid;
+  border-color: lightgray;
+  border-top-width: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 1px;
+  box-shadow: 0 4px 6px -6px gray;
+
+  padding: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  justify-content: space-between;
+
+  .left-menu {
+    display: flex;
+    margin-top: 6px;
+  }
+
+  .right-menu {
+    display: flex;
+  }
+}
+
+.popup {
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.5);
+}
+
+.hidden {
+  display: none;
+}
+
+.popup-close {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.popup-close-x {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.popup-content {
+  background-color: #fefefe;
+  margin: 15% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; 
+  border-radius: 10px;
+}
+
+.burger-popup-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 50px;
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
+.burger-popup-links-left-aligned {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+}
+
+.burger-popup-link {
+  color: black;
+  margin-top: 15px;
+  font-size: 20px;
+}
+
+.header {
+  color: black;
+  font-size: $sg_text_size_header;
 }
 
 .button-container {
@@ -117,10 +298,6 @@ a {
 .dark-button {
   background-color: $sg_color;
   color: white;
-}
-
-.main-body {
-  margin-top: 90px;
 }
 
 </style>
