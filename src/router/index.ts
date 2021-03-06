@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import GettingStarted from '../views/GettingStarted.vue'
 import Pricing from '../views/Pricing.vue'
 import ContactUs from '../views/ContactUs.vue'
+import Docs from '../views/Docs.vue'
 
 Vue.use(VueRouter)
 
@@ -27,6 +28,11 @@ const routes: Array<RouteConfig> = [
     path: '/ContactUs',
     name: 'ContactUs',
     component: ContactUs
+  },
+  {
+    path: '/Docs',
+    name: 'Docs',
+    component: Docs
   },
   // {
   //   path: '/about',

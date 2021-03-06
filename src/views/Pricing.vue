@@ -87,6 +87,7 @@ export default class Pricing extends Vue {
 </script>
 
 <style scoped>
+  
   .pricing-container {
     display: flex;
     margin-top: 120px;
@@ -97,9 +98,11 @@ export default class Pricing extends Vue {
   @media (min-width: 1230px) {
     .pricing-container {
       flex-direction: row;
+      height: 65vh;
     }
     .pricing-item {
       width: 40vw;
+      height: 400px;
     }
   }
 
@@ -109,7 +112,7 @@ export default class Pricing extends Vue {
       flex-direction: column;
     }
     .pricing-item {
-      width: 370px;
+      width: 350px;
       margin-top: 50px;
     }
   }

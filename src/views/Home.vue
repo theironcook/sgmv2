@@ -185,7 +185,7 @@
         </div>
         <br><br>
         <div class="blurb-1 blurb-text">
-          Using secure credentials you can invoke jobs through the API from any platform.  Saas glue jobs can be designed to call back to any of your automation platforms, maintaining a cross-platform process thread.
+          Using secure credentials you can invoke jobs through the saas glue API from any platform.  Saas glue jobs can be designed to call back to any of your automation platforms, maintaining a cross-platform process thread.
         </div>
         <div class="blurb-1 blurb-text">
           Because saas glue works with anything you can augment your current solutions without having to rip and replace anything.
@@ -404,7 +404,7 @@
           @sgo stands for “saas glue out”.  Inserting it into your script alerts the agent to extract the variable and send it back to the API for use in other tasks within the job.
         </div>
         <div class="blurb-1 blurb-text">
-          This method lets you keep state even in a polyglot job because the scripts and execution environments are decoupled. [LINK TO DOCUMENTATION SYNTAX PAGE]
+          This method lets you keep state even in a polyglot job because the scripts and execution environments are decoupled. 
         </div>
 
         <div class="section-break"></div>
@@ -418,13 +418,17 @@
           Saas glue never sends in-bound connections to where agents run.
         </div>
         <div class="blurb-1 blurb-text">
-          When you create an agent, saas glue helps you generate a secure oauth2.0 token only known to you.
+          When you create an agent, saas glue helps you generate secure Oauth 2.0 tokens only known to you.
         </div>
         <div class="blurb-1 blurb-text">
           Your secure saas glue agents securely connect to the saas glue cloud with https using your custom oath2.0 tokens.
         </div>
         <div class="blurb-1 blurb-text">
-          All communication with the saas glue cloud is authenticated and authorized only for your account.
+          All communication with the saas glue cloud is encrypted, authenticated and authorized only for your account.
+        </div>
+
+        <div class="blurb-1 blurb-text">
+          The API is configurable to only allow users certain Access Rights to the saas glue cloud.
         </div>
         
 
@@ -436,7 +440,8 @@
         </div>
         <br><br>
         <div class="blurb-1 blurb-text">
-          If you find yourself having to work around limitations in your current automation platforms try using saas glue.  You can get started [LINK TO GETTING STARTED] in as little as five minutes and running scripts from the cloud console is free.
+          If you find yourself having to work around limitations in your current automation platforms try using saas glue.  
+          You can <router-link to="/GettingStarted" class="inline-link">get started </router-link> in as little as five minutes and running scripts from the cloud console is free.
         </div>
         <div class="blurb-1 blurb-text">
           Sign up today and see how saas glue can fill your process automation gaps.
@@ -445,9 +450,6 @@
           <div class="button-container"><a href="https://console.saasglue.com" class="button dark-button">Try for Free</a></div>
         </div>
 
-
-
-        <div class="bottom-padding"></div>
       </div>
     </div>
   </div>
@@ -721,10 +723,6 @@ $header_size: 24px;
 
 .bold-text {
   font-weight: 700;
-}
-
-.bottom-padding {
-  height: 600px;
 }
 
 </style>

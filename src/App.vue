@@ -2,7 +2,7 @@
   <div id="app">
     <div>
       <div class="desktop-menu">
-        <router-link to="/"><img src="~@/assets/logo_1.png"></router-link>
+        <router-link to="/"><img src="~@/assets/logo_1.png" class="logo"></router-link>
         <span class="spacer"></span>
 
         <router-link to="/" class="nav-link" :class="{selected: isRouterLinkActive('/')}">Home</router-link>
@@ -52,7 +52,7 @@
             <router-link to="/" class="burger-popup-link" @click.native="hideBurgerPopup=true">Home</router-link>            
             <router-link to="/GettingStarted" class="burger-popup-link" @click.native="hideBurgerPopup=true">Getting Started</router-link>
             <router-link to="/pricing" class="burger-popup-link" @click.native="hideBurgerPopup=true">Pricing</router-link>
-            <router-link to="/docs" class="burger-popup-link" @click.native="hideBurgerPopup=true">Resources</router-link>
+            <router-link to="/docs" class="burger-popup-link" @click.native="hideBurgerPopup=true">Docs</router-link>
             <router-link to="/docs" class="burger-popup-link" @click.native="hideBurgerPopup=true">Blog</router-link>
             <span class="burger-popup-spacer"></span>
             <a href="https://console.saasglue.com" class="burger-popup-link round-button">
@@ -70,8 +70,10 @@
       <router-view/>
     </div>
 
-    &#169; 2021, saas glue LLC​
-    <router-link to="/ContactUs" class="nav-link" style="margin-left: 20px;">Contact Us</router-link>
+    <div class="footer">
+      &#169; 2021, saas glue LLC​
+      <router-link to="/ContactUs" class="nav-link" style="margin-left: 20px;">Contact Us</router-link>
+    </div>
 
   </div>
 </template>
@@ -298,6 +300,15 @@ a {
 .dark-button {
   background-color: $sg_color;
   color: white;
+}
+
+.footer{
+  margin-top: 100px;
+  margin-bottom: 15px;
+}
+
+.inline-link {
+  color: $sg_color;
 }
 
 </style>
