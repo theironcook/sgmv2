@@ -10,7 +10,7 @@
         <router-link to="/Pricing" class="nav-link" :class="{selected: isRouterLinkActive('/Pricing')}">Pricing</router-link>
         <router-link to="/Docs" class="nav-link" :class="{selected: isRouterLinkActive('/Docs')}">Docs</router-link>
 
-        <a class="nav-link" href="">Blog</a>
+        <a class="nav-link" href="https://saasglue.blogspot.com/">Blog</a>
 
         <span class="center-spacer"></span>
         <span class="nav-link">
@@ -53,7 +53,7 @@
             <router-link to="/GettingStarted" class="burger-popup-link" @click.native="hideBurgerPopup=true">Getting Started</router-link>
             <router-link to="/pricing" class="burger-popup-link" @click.native="hideBurgerPopup=true">Pricing</router-link>
             <router-link to="/docs" class="burger-popup-link" @click.native="hideBurgerPopup=true">Docs</router-link>
-            <router-link to="/docs" class="burger-popup-link" @click.native="hideBurgerPopup=true">Blog</router-link>
+            <a href="https://saasglue.blogspot.com/">Blog</a>
             <span class="burger-popup-spacer"></span>
             <a href="https://console.saasglue.com" class="burger-popup-link round-button">
               Login
