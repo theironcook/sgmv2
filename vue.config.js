@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  publicPath: 'https://theironcook.github.io/sgmv2/dist',
+  //publicPath: 'https://theironcook.github.io/sgmv2/dist',
   css: {
     loaderOptions: {
       sass: {
