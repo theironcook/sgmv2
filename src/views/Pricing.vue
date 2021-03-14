@@ -1,5 +1,17 @@
 <template>
   <div class="pricing-container">
+    <!-- <div class="pricing-item">
+      aaa<br>bbb<br>ccc<br>ddd<br>eee<br>fff<br>
+    aaa<br>bbb<br>ccc<br>ddd<br>eee<br>fff<br>
+    aaa<br>bbb<br>ccc<br>ddd<br>eee<br>fff<br>
+    aaa<br>bbb<br>ccc<br>ddd<br>eee<br>fff<br>
+    aaa<br>bbb<br>ccc<br>ddd<br>eee<br>fff<br>
+    aaa<br>bbb<br>ccc<br>ddd<br>eee<br>fff<br>
+    aaa<br>bbb<br>ccc<br>ddd<br>eee<br>fff<br>
+    aaa<br>bbb<br>ccc<br>ddd<br>eee<br>fff<br>
+    </div> -->
+    
+    
     <div class="pricing-item">
       <div class="pricing-title">
         Free Account
@@ -87,41 +99,46 @@ export default class Pricing extends Vue {
 </script>
 
 <style scoped>
-  
-  .pricing-container {
-    display: flex;
-    margin-top: 120px;
-    justify-content: center;
-  }
-
-  /* Large screen */
-  @media (min-width: 1230px) {
-    .pricing-container {
-      flex-direction: row;
-      height: 65vh;
-    }
-    .pricing-item {
-      width: 40vw;
-      height: 400px;
-    }
-  }
 
   /* Mobile screen */
   @media (max-width: 1230px) {
     .pricing-container {
       flex-direction: column;
     }
+
     .pricing-item {
       width: 350px;
       margin-top: 50px;
+      margin-left: 20px;
     }
+  }
+
+  /* Desktop */
+  @media (min-width: 1230px) {
+    .pricing-container {
+      flex-direction: row;
+      height: 65vh;
+    }
+    
+    .pricing-item {
+      width: 40vw;
+      height: 400px;
+      margin-left: 60px;
+    }
+  }
+
+  .pricing-container {
+    display: flex;
+    margin-top: 120px;
+    justify-content: center;
   }
 
   .pricing-item {
     background-color: #F6FAFF;
-    border-radius: 5px;;
-    margin-left: 40px;
+    border-radius: 5px;
     position: relative;
+    max-width: 600px;
+    z-index: -1;
   }
 
   .pricing-title {

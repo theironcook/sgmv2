@@ -475,7 +475,7 @@ export default class Home extends Vue {
     };
 
     this.scrollTargets = [ 'overview', 'integrates', 'anywhere', 'language', 'infrastructure', 'scalable',
-                           'architecture', 'structure', 'management', 'state' ].map((targetName) => {
+                           'architecture', 'structure', 'management', 'state', 'security' ].map((targetName) => {
       return document.getElementById(`scroll-target-${targetName}`);
     });
 
