@@ -190,9 +190,6 @@
         <div class="blurb-1 blurb-text">
           Because saas glue works with anything you can augment your current solutions without having to rip and replace anything.
         </div>
-        <div class="blurb-1 blurb-text">
-          [cloud logo]
-        </div>
         <div class="blurb-1 blurb-text bold-text">
           Jenkins, Ansible, Terraform, Chef, Puppet, Salt Stack, Git Lab, AWS, GCP, Azure DevOps, etc.
         </div>
