@@ -11,7 +11,7 @@
 
     <div class="home">
       <div class="nav-menu" v-if="screenWidth > 1230 || mobileShowNavMenu">
-        <div class="nav-header">Saas Glue</div>
+        <div class="nav-header" id="scroll-target-home">Saas Glue</div>
         <div class="nav-link" 
             :class="{'nav-link-selected': activeScrollTargetId === 'scroll-target-overview'}">
             <a href="" @click.prevent="scrollTo('overview')">Overview</a>
@@ -53,8 +53,8 @@
           <a href="" @click.prevent="scrollTo('structure')">Job structure</a>
         </div>
         <div class="nav-link"
-              :class="{'nav-link-selected': activeScrollTargetId === 'scroll-target-management'}">
-          <a href="" @click.prevent="scrollTo('management')">Job management</a>
+              :class="{'nav-link-selected': activeScrollTargetId === 'scroll-target-routes'}">
+          <a href="" @click.prevent="scrollTo('routes')">Job routes</a>
         </div>
         <div class="nav-link"
               :class="{'nav-link-selected': activeScrollTargetId === 'scroll-target-state'}">
@@ -91,13 +91,13 @@
               Integrates with all other platforms through a cloud API
             </li>
             <li class="checked-li">
-              Works in any network that allows outgoing HTTPS to the secure sg cloud
+              Works in any network that allows outgoing HTTPS connections to the secure sg cloud
             </li>
             <li class="checked-li">
-              Works with any set of programming languages
+             Works with all programming languages
             </li>
             <li class="checked-li">
-              No add-on components to install and manage
+              Provides all the automation infrastructure
             </li>
             <li class="checked-li">
               Scales horizontally to handle enterprise workloads
@@ -161,21 +161,48 @@
         <div class="section-break"></div>
 
         <div class="header">
-          Saas glue in a nutshell
+          The innovation twist
         </div>
         <br><br>
         <div class="blurb-1 blurb-text">
-          Our unique automation approach decouples job management from code execution.  
+          Other platforms adapt external tools to themselves by wrapping them in layers of abstraction.  Each new tool requires another layer in order to be accessible to the platform.  For example many automation platforms have domain specific languages used to encode desired state instructions.  These abstractions tend to leak over time and require imperative solutions to fill the gaps.
         </div>
         <div class="blurb-1 blurb-text">
-        Jobs are managed in the cloud where all of the code is stored.  At runtime, tasks are distributed to machines for execution through agents, which you install.  Agents collect all output and return it the the cloud where it is assembled into a complete job record.
+          Saas glue adapts to everything else by decoupling job management from code execution.  Job designs, including code files, are stored centrally.  At runtime code is delivered to the computing environment through agents, which you install on your machines.
         </div>
         <div class="blurb-1 blurb-text">
-          With saas glue you can work with all of your machines using any set of programming languages to do pretty much anything.
+          This design gives you the freedom to access all of your compute endpoints directly without abstraction layers and with the power of centrally managed jobs.
         </div>
         <div class="blurb-1 blurb-text">
-          Here is our rule of thumb: If you can do something from the local command prompt you can do it the same way in saas glue through our method of delivering code to the computing environment.
+          Here is our rule of thumb: If you can do something from the local command prompt you can do it the same way in saas glue. 
         </div>
+
+        <div class="section-break"></div>
+
+        <div class="blurb-1 blurb-text bold-text">
+          What makes saas glue different?
+        </div>
+
+        <div class="blurb-1 blurb-text">
+          <ul>
+            <li class="checked-li">
+              No servers, masters, slaves, nodes or clusters
+            </li>
+            <li class="checked-li">
+              No plugins, modules or add-on components
+            </li>
+            <li class="checked-li">
+              No platform to install, configure and maintain
+            </li>
+            <li class="checked-li">
+              No updates that can break your pipeline
+            </li>
+            <li class="checked-li">
+              No need to rip and replace other infrastructure
+            </li>
+          </ul>
+        </div>
+        
 
         <div class="section-break"></div>
 
@@ -202,7 +229,7 @@
         </div>
         <br><br>
         <div class="blurb-1 blurb-text">
-          When the saas glue agent is installed, it immediately calls home to the cloud and establishes a regular heartbeat through HTTPS.  The agent receives instructions from a message queue and sends results to the API.
+          When the saas glue agent is installed, it immediately calls home to the cloud and establishes a regular secure heartbeat through HTTPS.  The agent receives instructions from a message queue and sends results to the API.
         </div>
         <div class="blurb-1 blurb-text">
           This simple design lets the agent work on almost any network.  And since agents talk only to the cloud, your job can hop from one network to another without regard to network boundaries.
@@ -363,7 +390,7 @@
 
         <div class="section-break"></div>
 
-        <div class="section-title" id="scroll-target-management">how</div>
+        <div class="section-title" id="scroll-target-routes">how</div>
         <div class="header">
           Job routes
         </div>
@@ -471,8 +498,8 @@ export default class Home extends Vue {
       threshold: 1
     };
 
-    this.scrollTargets = [ 'overview', 'integrates', 'anywhere', 'language', 'infrastructure', 'scalable',
-                           'architecture', 'structure', 'management', 'state', 'security' ].map((targetName) => {
+    this.scrollTargets = [ 'home', 'overview', 'integrates', 'anywhere', 'language', 'infrastructure', 'scalable',
+                           'architecture', 'structure', 'routes', 'state', 'security' ].map((targetName) => {
       return document.getElementById(`scroll-target-${targetName}`);
     });
 
