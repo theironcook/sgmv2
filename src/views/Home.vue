@@ -78,7 +78,7 @@
       <div class="main-body">
 
         <div class="header" id="scroll-target-overview">
-          Cloud based workflow manager
+          Cloud based workflow manager 
         </div>
         <br><br>
         <div class="blurb-1 blurb-text">
