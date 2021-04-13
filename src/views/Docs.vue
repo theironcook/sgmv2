@@ -61,7 +61,7 @@
             <h2 class="doc-sec-title">
               <span class="doc-sec-count" style="display: inline-block"
                 >2.1.</span
-              >Saas Glue Framework Overview
+              >SaasGlue Framework Overview
               
             </h2>
             <div class="doc-sec-content">
@@ -70,7 +70,7 @@
               </h2>
               <p>
                 <span style="font-weight: 400"
-                  >The basic components of the saas glue platform are the cloud
+                  >The basic components of the SaasGlue platform are the cloud
                   service and Agents installed on machines.&nbsp; The machines
                   can be physical, virtual or containers.&nbsp; And they can be
                   located in many types of environments including corporate
@@ -80,7 +80,7 @@
               <p>
                 <span style="font-weight: 400"
                   >When agents are installed they begin sending a heartbeat to
-                  the saas glue cloud.&nbsp; They receive instructions to
+                  the SaasGlue cloud.&nbsp; They receive instructions to
                   execute scripts and send the results back to the cloud.</span
                 >
               </p>
@@ -126,7 +126,7 @@
               </p>
               <p>
                 <span style="font-weight: 400"
-                  >Jobs are the central feature that makes saas glue a powerful
+                  >Jobs are the central feature that makes SaasGlue a powerful
                   automation engine.&nbsp; They can reach across all kinds of
                   networks, devices, languages and applications, incorporating
                   them into unified, well-orchestrated workflows.
@@ -196,7 +196,7 @@
               <h2>Script</h2>
               <p>
                 <span style="font-weight: 400"
-                  >The Script is a saas glue object which contains the code that
+                  >The Script is a SaasGlue object which contains the code that
                   is to be executed by the interpreter and the type of
                   interpreter to use to run the script.</span
                 >
@@ -226,9 +226,9 @@
               </p>
               <p>
                 <span style="font-weight: 400"
-                  >JobDefs are normally designed using the saas glue web
+                  >JobDefs are normally designed using the SaasGlue web
                   application. However, they can also be created dynamically
-                  using the saas glue API.</span
+                  using the SaasGlue API.</span
                 >
               </p>
               <p>
@@ -240,8 +240,8 @@
               </p>
               <p style="padding-left: 40px">
                 <span style="font-weight: 400"
-                  >1. Schedule a JobDef using the saas glue web application or
-                  the saas glue API.&nbsp; When the Schedule is triggered, the
+                  >1. Schedule a JobDef using the SaasGlue web application or
+                  the SaasGlue API.&nbsp; When the Schedule is triggered, the
                   JobDef will be used as a template to create and run a
                   Job.&nbsp; A scheduled Job may be </span
                 ><span style="font-weight: 400"
@@ -252,13 +252,13 @@
               <p style="padding-left: 40px">
                 <span style="font-weight: 400"
                   >2. A Job can be launched from a JobDef manually using the
-                  saas glue API or using the saas glue web
+                  SaasGlue API or using the SaasGlue web
                   application.&nbsp;</span
                 >
               </p>
               <p style="padding-left: 40px">
                 <span style="font-weight: 400"
-                  >3. A JobDef can be defined in JSON and sent to the saas glue
+                  >3. A JobDef can be defined in JSON and sent to the SaasGlue
                   API in an Http POST.&nbsp;</span
                 >
               </p>
@@ -282,7 +282,7 @@
                   the task complete with exit code 0) have a blank route code.
                   Tasks that fail (a step in the task completes with non-zero
                   exit code) have route code “fail”. Tasks that are interrupted
-                  (either by ctl+c or canceled using saas glue) have route code
+                  (either by ctl+c or canceled using SaasGlue) have route code
                   “interrupt”. To set a custom route code, print a string to
                   stdout following the pattern “@sgo{“route”, “[route name]”}”
                   from a script. If multiple scripts within a task set a custom
@@ -317,8 +317,8 @@
               </p>
               <p>
                 <span style="font-weight: 400"
-                  >Task routes can be defined using the saas glue API for
-                  JobDefs and Jobs and using the saas glue web
+                  >Task routes can be defined using the SaasGlue API for
+                  JobDefs and Jobs and using the SaasGlue web
                   application.</span
                 >
               </p>
@@ -346,7 +346,7 @@
               <p style="padding-left: 40px">
                 <b>Coalesce </b
                 ><span style="font-weight: 400"
-                  >directs saas glue to skip all but one job when there are
+                  >directs SaasGlue to skip all but one job when there are
                   multiple jobs queued up.&nbsp; This setting is useful for
                   scenarios where an agent has gone offline and missed the start
                   time for several scheduled jobs.&nbsp; It may be desirable to
@@ -358,7 +358,7 @@
                 ><span style="font-weight: 400">
                   – if “true”, when a Job created from the JobDef fails, the
                   JobDef will be “paused” until it is manually “resumed” (using
-                  the saas glue cloud interface or the API [link to JobDef API
+                  the SaasGlue cloud interface or the API [link to JobDef API
                   documentation]) or all failed Tasks are either canceled or
                   completed successfully. This facilitates certain workflow
                   scenarios, for example where all Jobs created from a JobDef
@@ -486,13 +486,13 @@
                 <span style="font-weight: 400"
                   >Tags are user defined and must be formatted in key value
                   pairs, such as “Linux=True”. Task Tags can be defined using
-                  the saas glue web application or the saas glue API.</span
+                  the SaasGlue web application or the SaasGlue API.</span
                 >
               </p>
               <p>
                 <span style="font-weight: 400"
                   >If a Task needs to run on a specific agent, use the Job
-                  Designer in the saas glue web application or the saas glue API
+                  Designer in the SaasGlue web application or the SaasGlue API
                   to specify which agent should run the Task. It is also
                   possible to dynamically determine the target agent at runtime
                   using runtime variables. Simply set the target agent to
@@ -589,9 +589,9 @@
                   >Saas glue can be used to execute any Script.&nbsp; The Script
                   type attribute is added to the Script object to make it easier
                   to work with common scripting languages.&nbsp; For example,
-                  the saas glue cloud interface Script editor provides cues
+                  the SaasGlue cloud interface Script editor provides cues
                   based on the script language. To use a script language not
-                  defined in saas glue use “SH” if the Script will run on Linux,
+                  defined in SaasGlue use “SH” if the Script will run on Linux,
                   Linux based or Mac operating systems and “CMD” for Windows and
                   then define the “Command” attribute either in the StepDef or
                   when executing the Script from the Console.&nbsp;</span
@@ -599,7 +599,7 @@
               </p>
               <p>
                 <span style="font-weight: 400"
-                  >The following script types are predefined in saas glue.</span
+                  >The following script types are predefined in SaasGlue.</span
                 >
               </p>
               <p style="padding-left: 40px">
@@ -657,7 +657,7 @@
             <div class="doc-sec-content">
               <p>
                 <span style="font-weight: 400"
-                  >Scripts defined in saas glue can be injected into other
+                  >Scripts defined in SaasGlue can be injected into other
                   scripts using the following syntax:</span
                 >
               </p>
@@ -681,7 +681,7 @@
               <p>
                 <span style="font-weight: 400"
                   >However, the [script name] itself cannot be a variable – it
-                  must be the name of a script defined in your saas glue
+                  must be the name of a script defined in your SaasGlue
                   team.</span
                 >
               </p>
@@ -703,7 +703,7 @@
                   >Runtime Variables are key-value pairs. They provide a
                   mechanism for dynamically injecting variable values in Script
                   code, Arguments and Environment Variables of a Task Step when
-                  it is executed by a saas glue Agent. Runtime variables can be
+                  it is executed by a SaasGlue Agent. Runtime variables can be
                   defined at design time on the Team level and in JobDefs, and
                   when a Job is created and they can also be generated
                   dynamically during Script execution.</span
@@ -721,7 +721,7 @@
               <p>
                 <span style="font-weight: 400"
                   >Runtime Variables can be defined on the Team level using the
-                  saas glue cloud interface or the saas glue API.</span
+                  SaasGlue cloud interface or the SaasGlue API.</span
                 >
               </p>
               <p>&nbsp;</p>
@@ -733,7 +733,7 @@
               <p>
                 <span style="font-weight: 400"
                   >Runtime Variables can be defined in JobDefs using the saas
-                  glue cloud interface or the saas glue API.</span
+                  glue cloud interface or the SaasGlue API.</span
                 >
               </p>
               <p>&nbsp;</p>
@@ -745,9 +745,9 @@
               <p>
                 <span style="font-weight: 400"
                   >Runtime Variables can be defined in a Job when the Job is
-                  created. When a Job is created using the saas glue API the
+                  created. When a Job is created using the SaasGlue API the
                   runtime variables can be included in the Http POST request.
-                  When a Job is created from a JobDef in the saas glue cloud UI
+                  When a Job is created from a JobDef in the SaasGlue cloud UI
                   the runtime variables can be entered in the Job creation
                   dialog.</span
                 >
@@ -770,7 +770,7 @@
                 <span style="font-weight: 400"
                   >For example, the following line of python script code would
                   dynamically create or modify a runtime variable with name
-                  “myKey” and value “myValue” when executed by a saas glue
+                  “myKey” and value “myValue” when executed by a SaasGlue
                   Agent:</span
                 >
               </p>
@@ -900,14 +900,14 @@
                 <span style="font-weight: 400"
                   >A StepDef can be configured so that Steps created from the
                   StepDef utilize runtime variables in arguments and/or
-                  environment variables using the saas glue API or the saas glue
+                  environment variables using the SaasGlue API or the SaasGlue
                   cloud interface.</span
                 >
               </p>
               <p>
                 <span style="font-weight: 400"
                   >Runtime variable injection can also be utilized when running
-                  Scripts using the saas glue cloud interface Console.</span
+                  Scripts using the SaasGlue cloud interface Console.</span
                 >
               </p>
               <p>&nbsp;</p>
@@ -939,7 +939,7 @@
                   monitored in real-time and searched for strings following the
                   @sgo runtime variable generation pattern. When runtime
                   variables are created/modified, the new values are sent to the
-                  saas glue cloud. If a Task fails and is restarted, the most
+                  SaasGlue cloud. If a Task fails and is restarted, the most
                   recent runtime variable values will be delivered with the Task
                   to the Agent where the Task resumes execution. Consequently,
                   Scripts can be designed to utilize the most recent value of
@@ -952,7 +952,7 @@
                   records in a file, the line number could be printed to stdout
                   with a string like “@sgo{“line_num”, “10”}” which would send
                   the runtime variable “line_num” with a value of “10” to the
-                  saas glue cloud. If the Task failed on line “11” and the Task
+                  SaasGlue cloud. If the Task failed on line “11” and the Task
                   is restarted, the Script could resume processing the file on
                   the line after “@sgg(“line_num”)” which would now have a value
                   of “10”.&nbsp;</span
@@ -1193,7 +1193,7 @@
                   >Saas glue makes it easy to create a service and deploy it to
                   any operating system. To run a task as a service, simply set
                   the “autoRestart” property of the task to “true” if using the
-                  saas glue API. If using the saas glue cloud UI, in the Job
+                  SaasGlue API. If using the SaasGlue cloud UI, in the Job
                   Designer -&gt; Task editor view, check the “Auto restart”
                   checkbox. The task can target “any qualified agent” or a
                   specific agent. If the agent running an autoRestart task is
@@ -1246,10 +1246,10 @@
             <div class="doc-sec-content">
               <p>
                 <span style="font-weight: 400"
-                  >The saas glue Agent is the vehicle for executing Scripts
-                  received from the saas glue cloud.&nbsp; The Agent can be
+                  >The SaasGlue Agent is the vehicle for executing Scripts
+                  received from the SaasGlue cloud.&nbsp; The Agent can be
                   installed on any supported operating system.&nbsp; When an
-                  Agent starts up it reports to the saas glue cloud which tracks
+                  Agent starts up it reports to the SaasGlue cloud which tracks
                   information about the Agent including the attributes described
                   below. A few of the attributes can be modified by users.</span
                 >
@@ -1370,7 +1370,7 @@
                     </td>
                     <td class="column-2">
                       Saas glue automatically assigns an Agent ID when a new
-                      agent is installed and calls back to the saas glue cloud.
+                      agent is installed and calls back to the SaasGlue cloud.
                       Users can discover the ID in the Agent Monitor or through
                       the API. Tasks can be routed to a specific machine using
                       the Agent ID.
@@ -1392,7 +1392,7 @@
                       The hostname of the physical or virtual machine or
                       container where the Agent is running.
                       <br /><br />
-                      Every machine connected to a saas glue account must have a
+                      Every machine connected to a SaasGlue account must have a
                       host name that is unique to the Org. The machineId will be
                       reported in every Agent heartbeat. If the hostname changes
                       then the Agent will be assigned a new ID.
@@ -1454,7 +1454,7 @@
                       <b>lastHeartbeatTime</b>
                     </td>
                     <td class="column-2">
-                      The last date and time saas glue received a heartbeat from
+                      The last date and time SaasGlue received a heartbeat from
                       the Agent.
                     </td>
                   </tr>
@@ -1463,7 +1463,7 @@
                       <b>offline</b>
                     </td>
                     <td class="column-2">
-                      If saas glue has not received a heartbeat from an Agent
+                      If SaasGlue has not received a heartbeat from an Agent
                       for more than 5 minutes the offline attribute is set to
                       "true". If the Agent begins sending a heartbeat again the
                       offline attribute will be reset to “false”.
@@ -1503,7 +1503,7 @@
                     </td>
                     <td class="column-2">
                       Cron jobs that reside on the machine where the Agent is
-                      installed. These jobs can be uploaded to saas glue where
+                      installed. These jobs can be uploaded to SaasGlue where
                       they can be centrally managed and orchestrated.
                     </td>
                   </tr>
@@ -1531,7 +1531,7 @@
                       that are marked as "run on any machine" or "run on all
                       machines" if this attribute is set to “false”.<br /><br />
                       trackSysInfo reports updated system information to the
-                      saas glue cloud with each heartbeat.
+                      SaasGlue cloud with each heartbeat.
                     </td>
                   </tr>
                 </tbody>
@@ -1546,7 +1546,7 @@
                     </td>
                     <td class="column-2">
                       <br />
-                      Download the Agent install from saas glue.<br /><br />
+                      Download the Agent install from SaasGlue.<br /><br />
                       agentDownload/agentstub/:platform/:arch?<br /><br />
                       “platform” = required - must be one of “linux”, “win”,
                       “macos”, “alpine”, “freebsd”<br /><br />
@@ -2254,7 +2254,7 @@ curl --location --request PUT 'https://saasglue.com/api/v0/agent/properties/[age
             <div class="doc-sec-content">
               <p>
                 <span style="font-weight: 400"
-                  >Artifacts are files that can be uploaded to saas glue to be
+                  >Artifacts are files that can be uploaded to SaasGlue to be
                   used in the execution of Jobs and Tasks.</span
                 >
               </p>
@@ -2350,7 +2350,7 @@ curl --location --request PUT 'https://saasglue.com/api/v0/agent/properties/[age
                     </td>
                     <td class="column-2">
                       Prefix is the path name where an artifact is stored in
-                      saas glue. The path can include one or more "/" delimited
+                      SaasGlue. The path can include one or more "/" delimited
                       folder names - e.g. "prod/loader/".
                     </td>
                   </tr>
@@ -2606,7 +2606,7 @@ curl --location --request POST 'https://saasglue.com/api/v0/artifact' --header '
               <p>
                 <span style="font-weight: 400"
                   >Now use the “url” returned from the previous call to upload
-                  the file to saas glue:</span
+                  the file to SaasGlue:</span
                 >
               </p>
               <div
@@ -2795,7 +2795,7 @@ curl [url] &gt; [file name]</pre
               <p>
                 <span style="font-weight: 400"
                   >Jobs can be created from a JobDef by 1) scheduling the
-                  JobDef, 2) with the saas glue web application or 3) by
+                  JobDef, 2) with the SaasGlue web application or 3) by
                   submitting a POST to the Job API endpoint.</span
                 >
               </p>
@@ -4070,7 +4070,7 @@ curl --location --request POST 'https://saasglue.com/api/v0/job' --header 'Conte
                 <span style="font-weight: 400"
                   >A JobDef object is a template used to create and run a
                   job.&nbsp; Typically a job template is created with the Job
-                  Designer and stored in a saas glue account.&nbsp;&nbsp;</span
+                  Designer and stored in a SaasGlue account.&nbsp;&nbsp;</span
                 >
               </p>
               <p>
@@ -4264,7 +4264,7 @@ curl --location --request POST 'https://saasglue.com/api/v0/job' --header 'Conte
                       to handle situations where a JobDef object has multiple
                       queued Jobs. This could occur if multiple Jobs are created
                       but maxInstances is set to 1 or if Jobs are created when a
-                      JobDef is PAUSED. The next time saas glue is able to run
+                      JobDef is PAUSED. The next time SaasGlue is able to run
                       Jobs for the given JobDef, it may not be practical or
                       desirable to run all the queued Jobs. If coalesce is set
                       to TRUE, the first queued Job will run and the rest will
@@ -6270,15 +6270,15 @@ curl --location --request GET 'https://saasglue.com/api/v0/schedule/?filter=_job
                       Saas glue can be used to execute any script type. This
                       attribute is added to the Script object to make it easier
                       to work with common scripting languages. For example, the
-                      saas glue cloud interface Script editor provides cues
+                      SaasGlue cloud interface Script editor provides cues
                       based on the script language. To use a script language not
-                      defined in saas glue use type “SH” if the Script will run
+                      defined in SaasGlue use type “SH” if the Script will run
                       on Linux, Linux based or Mac operating systems and type
                       “CMD” for Windows and then define the “Command” attribute
                       either in the StepDef or when executing the Script from
                       the Console.
                       <br /><br />
-                      The following script types are defined in saas glue.<br /><br />
+                      The following script types are defined in SaasGlue.<br /><br />
                       0 = PYTHON<br />
                       1 = NODE<br />
                       2 = SH<br />

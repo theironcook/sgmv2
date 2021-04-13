@@ -11,7 +11,7 @@
 
     <div class="home">
       <div class="nav-menu" v-if="screenWidth > 1230 || mobileShowNavMenu">
-        <div class="nav-header" id="scroll-target-home">Saas Glue</div>
+        <div class="nav-header" id="scroll-target-home">SaasGlue</div>
         <div class="nav-link" 
             :class="{'nav-link-selected': activeScrollTargetId === 'scroll-target-overview'}">
             <a href="" @click.prevent="scrollTo('overview')">Overview</a>
@@ -78,26 +78,26 @@
       <div class="main-body">
 
         <div class="header" id="scroll-target-overview">
-          Fill the gaps in your automation infrastructure
+          Cloud based workflow manager
         </div>
         <br><br>
         <div class="blurb-1 blurb-text">
-          Saas glue is a SaaS-based integration, orchestration and automation platform that lets you fill the gaps in your existing automation infrastructure
+          SaasGlue is a SaaS-based integration, orchestration and automation platform that lets you fill the gaps in your existing automation infrastructure
         </div>
 
         <div class="blurb-1 blurb-text">
           <ul>
             <li class="checked-li">
-              Integrates with all other platforms through a cloud API
+              Design and run workflows through the SaasGlue API
             </li>
             <li class="checked-li">
-              Works in any network that allows outgoing HTTPS connections to the secure sg cloud
+              Seamlessly orchestrate workflows across on-prem and multi-cloud environments
             </li>
             <li class="checked-li">
-             Works with all programming languages
+             Leverage your existing code written in any language
             </li>
             <li class="checked-li">
-              Provides all the automation infrastructure
+              Leverage your existing automation and workflow tools
             </li>
             <li class="checked-li">
               Scales horizontally to handle enterprise workloads
@@ -168,19 +168,19 @@
           Other platforms adapt external tools to themselves by wrapping them in layers of abstraction.  Each new tool requires another layer in order to be accessible to the platform.  For example many automation platforms have domain specific languages used to encode desired state instructions.  These abstractions tend to leak over time and require imperative solutions to fill the gaps.
         </div>
         <div class="blurb-1 blurb-text">
-          Saas glue adapts to everything else by decoupling job management from code execution.  Job designs, including code files, are stored centrally.  At runtime code is delivered to the computing environment through agents, which you install on your machines.
+          Saas glue works with everything else by decoupling job management from code execution.  Job designs, including code files, are stored centrally.  At runtime code is delivered to the computing environment through agents, which you install on your machines.
         </div>
         <div class="blurb-1 blurb-text">
           This design gives you the freedom to access all of your compute endpoints directly without abstraction layers and with the power of centrally managed jobs.
         </div>
         <div class="blurb-1 blurb-text">
-          Here is our rule of thumb: If you can do something from the local command prompt you can do it the same way in saas glue. 
+          Here is our rule of thumb: If you can do something from the local command prompt you can do it the same way in SaasGlue. 
         </div>
 
         <div class="section-break"></div>
 
         <div class="blurb-1 blurb-text bold-text">
-          What makes saas glue different?
+          What makes SaasGlue different?
         </div>
 
         <div class="blurb-1 blurb-text">
@@ -212,13 +212,13 @@
         </div>
         <br><br>
         <div class="blurb-1 blurb-text">
-          Using secure credentials you can invoke jobs through the saas glue API from any platform.  Saas glue jobs can be designed to call back to any of your automation platforms, maintaining a cross-platform process thread.
+          Using secure credentials you can invoke jobs through the SaasGlue API from any platform.  Saas glue jobs can be designed to call back to any of your automation platforms, maintaining a cross-platform process thread.
         </div>
         <div class="blurb-1 blurb-text">
-          Because saas glue works with anything you can augment your current solutions without having to rip and replace anything.
+          Because SaasGlue works with anything you can augment your current solutions without having to rip and replace anything.
         </div>
-        <div class="blurb-1 blurb-text bold-text">
-          Jenkins, Ansible, Terraform, Chef, Puppet, Salt Stack, Git Lab, AWS, GCP, Azure DevOps, etc.
+        <div class="blurb-1 blurb-text">
+          <img class="blurb-image" src="~@/assets/IntegratedProducts.png">
         </div>
 
         <div class="section-break"></div>
@@ -229,7 +229,7 @@
         </div>
         <br><br>
         <div class="blurb-1 blurb-text">
-          When the saas glue agent is installed, it immediately calls home to the cloud and establishes a regular secure heartbeat through HTTPS.  The agent receives instructions from a message queue and sends results to the API.
+          When the SaasGlue agent is installed, it immediately calls home to the cloud and establishes a regular secure heartbeat through HTTPS.  The agent receives instructions from a message queue and sends results to the API.
         </div>
         <div class="blurb-1 blurb-text">
           This simple design lets the agent work on almost any network.  And since agents talk only to the cloud, your job can hop from one network to another without regard to network boundaries.
@@ -419,7 +419,7 @@
           Saas glue is stateless to make it scalable, but your jobs can be stateful.
         </div>
         <div class="blurb-1 blurb-text">
-          You can insert variables into scripts and extract them out using a light touch syntax that is understood by the agent and platform API.  In saas glue these are referred to as “runtime variables”.
+          You can insert variables into scripts and extract them out using a light touch syntax that is understood by the agent and platform API.  In SaasGlue these are referred to as “runtime variables”.
         </div>
         <div class="blurb-1 blurb-text">
           @sgg stands for “saas glue global”.  Inserting this syntax into any script tells the agent where to insert a variable before passing it to the interpreter for execution.
@@ -442,17 +442,17 @@
           Saas glue never sends in-bound connections to where agents run.
         </div>
         <div class="blurb-1 blurb-text">
-          When you create an agent, saas glue helps you generate secure Oauth 2.0 tokens only known to you.
+          When you create an agent, SaasGlue helps you generate secure Oauth 2.0 tokens only known to you.
         </div>
         <div class="blurb-1 blurb-text">
-          Your secure saas glue agents securely connect to the saas glue cloud with https using your custom oath2.0 tokens.
+          Your secure SaasGlue agents securely connect to the SaasGlue cloud with https using your custom oath2.0 tokens.
         </div>
         <div class="blurb-1 blurb-text">
-          All communication with the saas glue cloud is encrypted, authenticated and authorized only for your account.
+          All communication with the SaasGlue cloud is encrypted, authenticated and authorized only for your account.
         </div>
 
         <div class="blurb-1 blurb-text">
-          The API is configurable to only allow users certain Access Rights to the saas glue cloud.
+          The API is configurable to only allow users certain Access Rights to the SaasGlue cloud.
         </div>
         
 
@@ -464,11 +464,11 @@
         </div>
         <br><br>
         <div class="blurb-1 blurb-text">
-          If you find yourself having to work around limitations in your current automation platforms try using saas glue.  
+          If you find yourself having to work around limitations in your current automation platforms try using SaasGlue.  
           You can <router-link to="/GettingStarted" class="inline-link">get started </router-link> in as little as five minutes and running scripts from the cloud console is free.
         </div>
         <div class="blurb-1 blurb-text">
-          Sign up today and see how saas glue can fill your process automation gaps.
+          Sign up today and see how SaasGlue can fill your process automation gaps.
         </div>
         <div class="blurb-1 blurb-text">
           <div class="button-container"><a href="https://console.saasglue.com" class="button dark-button">Try for Free</a></div>

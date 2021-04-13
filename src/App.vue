@@ -71,7 +71,7 @@
     </div>
 
     <div class="footer">
-      &#169; 2021, saas glue LLC​
+      &#169; 2021, SaasGlue LLC​
       <router-link to="/ContactUs" class="nav-link inline-link" style="margin-left: 20px;">Contact Us</router-link>
     </div>
 
