@@ -2,7 +2,7 @@
   <div id="app">
     <div>
       <div class="desktop-menu">
-        <router-link to="/"><img src="~@/assets/logo_1.png" class="logo"></router-link>
+        <router-link to="/"><img src="~@/assets/logo3.png" class="logo"></router-link>
         <span class="spacer"></span>
 
         <router-link to="/" class="nav-link" :class="{selected: isRouterLinkActive('/')}">Home</router-link>
@@ -30,7 +30,7 @@
         <a class="nav-link logo" href="">
           <img width="150px" 
                 style="margin-left: 15px; margin-top: -5px;" 
-                src="~@/assets/logo_1.png">
+                src="~@/assets/logo3.png">
         </a>
       </span>
       <span class="right-menu">
@@ -94,8 +94,16 @@ export default class App extends Vue {
 
 <style lang="scss">
 
+.logo {
+  height: 30px;
+}
+
 /* Mobile */
 @media (max-width: 1230px) {
+  .logo {
+    margin-top: 5px;
+  }
+
   .desktop-menu {
     display: none;
   }
@@ -163,10 +171,6 @@ a {
   .nav-link {
     margin-left: 22px;
     font-size: $sg_text_size;
-  }
-
-  .logo {
-    margin-top: -7px;
   }
 
   .selected {
