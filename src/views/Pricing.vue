@@ -1,92 +1,89 @@
 <template>
-  <div class="pricing-container">
-    <!-- <div class="pricing-item">
-      aaa<br>bbb<br>ccc<br>ddd<br>eee<br>fff<br>
-    aaa<br>bbb<br>ccc<br>ddd<br>eee<br>fff<br>
-    aaa<br>bbb<br>ccc<br>ddd<br>eee<br>fff<br>
-    aaa<br>bbb<br>ccc<br>ddd<br>eee<br>fff<br>
-    aaa<br>bbb<br>ccc<br>ddd<br>eee<br>fff<br>
-    aaa<br>bbb<br>ccc<br>ddd<br>eee<br>fff<br>
-    aaa<br>bbb<br>ccc<br>ddd<br>eee<br>fff<br>
-    aaa<br>bbb<br>ccc<br>ddd<br>eee<br>fff<br>
-    </div> -->
-    
-    
-    <div class="pricing-item">
-      <div class="pricing-title">
-        Free Account
-      </div>
-      <div class="free-ribbon">
-        <div class="free-ribbon-inner">
-          FREE
-        </div>
-      </div>
-      <div class="pricing-body">
-        <div class="pricing-price">
-          <div class="pricing-symbol">$</div>
-          <div class="pricing-dollars">
-            0
-          </div>
-          <div class="pricing-cents">
-            00
-          </div>
-        </div>
-        <div class="pricing-list-container">
-          <div class="pricing-list">
-            <div class="pricing-list-item">
-              <img src="~@/assets/Checkmark.png" width="20" class="check">
-              Run unlimited scripts from the web console
-            </div>
-            <div class="pricing-list-item">
-              <img src="~@/assets/Checkmark.png" width="20" class="check">
-              Create unlimited agents
-            </div>
-            <div class="pricing-list-item">
-              <img src="~@/assets/Checkmark.png" width="20" class="check">
-              Store unlimited scripts
-            </div>
-          </div>
-        </div>
-      </div>
+  <div>
+    <div class="header spaced-header">
+      Free for the first 3 months.
+      <br>
+      Flat rates per script afterwards.
     </div>
+      
+    <div class="pricing-container">
 
-    <div class="pricing-item">
-      <div class="pricing-title">
-        Subscription Account
-      </div>
-      <div class="pricing-body">
-        <div class="pricing-price">
-          <div class="pricing-symbol">$</div>
-          <div class="pricing-dollars">
-            0
-          </div>
-          <div class="pricing-cents">
-            01
-          </div>
-          <div class="per-script">
-            per script
+      <div class="pricing-item">
+        <div class="pricing-title">
+          Free Account
+        </div>
+        <div class="free-ribbon">
+          <div class="free-ribbon-inner">
+            FREE
           </div>
         </div>
-
-        <div class="pricing-list-container">
-          <div class="pricing-list">
-            <div class="pricing-list-item">
-              <img src="~@/assets/Checkmark.png" width="20" class="check">
-               Create unlimited jobs
+        <div class="pricing-body">
+          <div class="pricing-price">
+            <div class="pricing-symbol">$</div>
+            <div class="pricing-dollars">
+              0
             </div>
-            <div class="pricing-list-item">
-              <img src="~@/assets/Checkmark.png" width="20" class="check">
-               Schedule jobs
+            <div class="pricing-cents">
+              00
             </div>
-            <div class="pricing-list-item">
-              <img src="~@/assets/Checkmark.png" width="20" class="check">
-              Launch jobs through the API
+          </div>
+          <div class="pricing-list-container">
+            <div class="pricing-list">
+              <div class="pricing-list-item">
+                <img src="~@/assets/Checkmark.png" width="20" class="check">
+                Run unlimited scripts from the web console
+              </div>
+              <div class="pricing-list-item">
+                <img src="~@/assets/Checkmark.png" width="20" class="check">
+                Create unlimited agents
+              </div>
+              <div class="pricing-list-item">
+                <img src="~@/assets/Checkmark.png" width="20" class="check">
+                Store unlimited scripts
+              </div>
             </div>
           </div>
         </div>
       </div>
+
+      <div class="pricing-item">
+        <div class="pricing-title">
+          Subscription Account
+        </div>
+        <div class="pricing-body">
+          <div class="pricing-price">
+            <div class="pricing-symbol">$</div>
+            <div class="pricing-dollars">
+              0
+            </div>
+            <div class="pricing-cents">
+              01
+            </div>
+            <div class="per-script">
+              per script
+            </div>
+          </div>
+
+          <div class="pricing-list-container">
+            <div class="pricing-list">
+              <div class="pricing-list-item">
+                <img src="~@/assets/Checkmark.png" width="20" class="check">
+                Create unlimited jobs
+              </div>
+              <div class="pricing-list-item">
+                <img src="~@/assets/Checkmark.png" width="20" class="check">
+                Schedule jobs
+              </div>
+              <div class="pricing-list-item">
+                <img src="~@/assets/Checkmark.png" width="20" class="check">
+                Launch jobs through the API
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
-
   </div>
 </template>
 
@@ -129,7 +126,7 @@ export default class Pricing extends Vue {
 
   .pricing-container {
     display: flex;
-    margin-top: 120px;
+    margin-top: 40px;
     justify-content: center;
   }
 
