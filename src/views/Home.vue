@@ -405,7 +405,7 @@
           There are two routing types--inbound and outbound.
         </div>
         <div class="blurb-1 blurb-text">
-          With inbound routes you declare which task the job will route to next based on specified output received in prior tasks.  The expected path of a job will most commonly be defined with inbound routes.
+          With inbound routes you declare prior dependencies that must be satisfied before a task is executed. An inbound route consists of a task name and a route code. Tasks with no inbound routes will be executed when the job starts. The expected path of a job will most commonly be defined with inbound routes.
         </div>
         <div class="blurb-1 blurb-text">
           Outbound routes let you specify a task to execute based on a specific outcome of a current task.  For instance, if there is a failure in the current task you can route to a recovery task to get your job back on track.
@@ -442,20 +442,20 @@
         </div>
         <br><br>
         <div class="blurb-1 blurb-text">
-          SaaSGlue never sends in-bound connections to where agents run.
+          SaaSGlue never creates inbound connections to the agent.
         </div>
         <div class="blurb-1 blurb-text">
-          When you create an agent, SaaSGlue helps you generate secure Oauth 2.0 tokens only known to you.
+          SaaSGlue helps you generate secure Oauth 2.0 tokens only known to you.
         </div>
         <div class="blurb-1 blurb-text">
-          Your secure SaaSGlue agents securely connect to the SaaSGlue cloud with https using your custom oath2.0 tokens.
+          Your secure SaaSGlue agents securely connect to the SaaSGlue cloud with https using your custom Oauth 2.0 tokens.
         </div>
         <div class="blurb-1 blurb-text">
           All communication with the SaaSGlue cloud is encrypted, authenticated and authorized only for your account.
         </div>
 
         <div class="blurb-1 blurb-text">
-          The API is configurable to only allow users certain Access Rights to the SaaSGlue cloud.
+          You can create Oauth 2.0 API access keys allowing access to specific SaaSGlue API functionality.
         </div>
         
 
