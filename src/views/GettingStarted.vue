@@ -32,7 +32,7 @@
             <b>Install the agent</b>
             <br>
             When you first log in you will be taken to the Agent Download page.  Download the agent and save it to your device.  
-            The agent will automatically call back to SaasGlue to establish a secure connection.
+            The agent will automatically call back to SaaSGlue to establish a secure connection.
             <br>
             <img class="screen-shot screen-shot-big clickable" src="~@/assets/GetStartedInstallAgent.png" @click="onImageClicked">
             <br>
@@ -43,21 +43,21 @@
           <li>
             <b>Create a script</b>
             <br>
-            Upload a script or create one in SaasGlue.  Use any language you want.  The SaasGlue console presents syntax highlighting for easy editing
+            Upload a script or create one in SaaSGlue.  Use any language you want.  The SaaSGlue console presents syntax highlighting for easy editing
             <br>
             <img class="screen-shot screen-shot-big clickable" src="~@/assets/GetStartedCreateScript.png" @click="onImageClicked">
           </li>
           <li>
             <b>Run your script</b>
             <br>
-              Run your script from the cloud console.  The agent will pass the script to the host machine for execution and return the results to SaasGlue.  
+              Run your script from the cloud console.  The agent will pass the script to the host machine for execution and return the results to SaaSGlue.  
             <br>
             <img class="screen-shot screen-shot-big clickable" src="~@/assets/GettingStartedRunScript.png" @click="onImageClicked">
           </li>
           <li>
             <b>See the results in the Job Monitor</b>
             <br>
-              Run your script from the cloud console.  The agent will pass the script to machine for execution and return the results to SaasGlue.  You can see the results in the job monitor.
+              Run your script from the cloud console.  The agent will pass the script to machine for execution and return the results to SaaSGlue.  You can see the results in the job monitor.
             <br>
             <img class="screen-shot screen-shot-big clickable" src="~@/assets/GettingStartedMonitor.png" @click="onImageClicked">
           </li>

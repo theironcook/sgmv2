@@ -2,7 +2,7 @@
   <div id="app">
     <div>
       <div class="desktop-menu">
-        <router-link to="/"><img src="~@/assets/logo3.png" class="logo"></router-link>
+        <router-link to="/"><img src="~@/assets/logo4.png" class="logo"></router-link>
         <span class="spacer"></span>
 
         <router-link to="/" class="nav-link" :class="{selected: isRouterLinkActive('/')}">Home</router-link>
@@ -33,7 +33,7 @@
         <a class="nav-link logo" href="">
           <img width="150px" 
                 style="margin-left: 15px; margin-top: -5px;" 
-                src="~@/assets/logo3.png">
+                src="~@/assets/logo4.png">
         </a>
       </span>
       <span class="right-menu">
@@ -76,7 +76,7 @@
     </div>
 
     <div class="footer">
-      &#169; 2021, SaasGlue LLC​
+      &#169; 2021, SaaSGlue LLC​
       <router-link to="/ContactUs" class="nav-link inline-link" style="margin-left: 20px;">Contact Us</router-link>
     </div>
 
