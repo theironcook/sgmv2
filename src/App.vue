@@ -78,7 +78,8 @@
     <div class="footer">
       &#169; 2021, SaaSGlue LLC​
       <router-link to="/ContactUs" class="nav-link inline-link" style="margin-left: 20px;">Contact Us</router-link>
-      <a class="nav-link" href="https://www.saasglue.com/PrivacyPolicy.html" style="margin-left: 20px;" target="_blank">Privacy Policy</a>
+      <a class="nav-link inline-link" href="https://www.saasglue.com/terms-of-service.html" style="margin-left: 20px;" target="_blank">Terms of Service</a>
+      <a class="nav-link inline-link" href="https://www.saasglue.com/privacy-policy.html" style="margin-left: 20px;" target="_blank">Privacy Policy</a>
     </div>
 
   </div>
