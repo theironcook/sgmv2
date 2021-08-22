@@ -28,6 +28,11 @@ export default class Community extends Vue {
 
   private readonly items = [
     {
+      title: 'Workshop - Creating cross-cloud data pipelines',
+      date: 'September 21st and 28th, 6pm MDT 2021',
+      mainLink: 'https://www.saasglue.com/workshop'
+    },
+    {
       title: 'Podcast - Stick All Of Your Systems And Data Together With SaaSGlue As Your Workflow Manager - Episode 201',
       date: 'July 5, 2021',
       mainLink: 'https://www.dataengineeringpodcast.com/saasglue-cloud-workflow-manager-episode-201/'

@@ -6,6 +6,7 @@ import Pricing from '../views/Pricing.vue'
 import ContactUs from '../views/ContactUs.vue'
 import Docs from '../views/Docs.vue'
 import Community from '../views/Community.vue'
+import Workshop from '../views/Workshop.vue'
 
 Vue.use(VueRouter)
 
@@ -39,11 +40,17 @@ const routes: Array<RouteConfig> = [
     path: '/Community',
     name: 'Community',
     component: Community
+  },
+  {
+    path: '/workshop',
+    name: 'workshop',
+    component: Workshop
   }
 ]
 
 const router = new VueRouter({
-  routes
+  routes,
+  mode: 'history'
 })
 
 export default router
