@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import VueRouter, { RouteConfig } from 'vue-router'
+import VueRouter, { RouteConfig, Route } from 'vue-router'
 import Home from '../views/Home.vue'
 import GettingStarted from '../views/GettingStarted.vue'
 import Pricing from '../views/Pricing.vue'
@@ -52,5 +52,13 @@ const router = new VueRouter({
   routes,
   mode: 'history'
 })
+
+router.beforeEach(async (to: Route, from: Route, next: (options?: any) => void) => { 
+  var _hsq = (<any>window)._hsq = (<any>window)._hsq || [];
+  _hsq.push(['setPath', to.path]);
+  _hsq.push(['trackPageView']);
+
+  next();
+}); 
 
 export default router
